@@ -1,5 +1,5 @@
 function test1(){
-    if (document.documentElement.scrollTop>100px) {
+    if (document.documentElement.scrollTop>100) {
         document.querySelector(".screen-scroller").style.backgroundcolor="red";
     }
     else{
