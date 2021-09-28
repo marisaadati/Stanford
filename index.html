@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
@@ -41,7 +43,7 @@
             </ul>
         </div>
     </nav>
-    <section class="panel img-fluid" >
+    <section class="img-fluid" >
         <p class="wordmark">
             Stanford
         </p>
@@ -76,10 +78,10 @@
                 <h2 class="center">Stanford News</h2>
                 <p class="paragraph-center">The latest stories from Stanford</p>
             </header>
-            <section class=".grid-container">
+            <section>
                 <div class="row justify-content-center mt-5">
                     <div class="col-5 art-1 article p-0">
-                            <a href="#"><img src="images/art1.jpg" class="img-fluid img-hover" ></a>
+                            <a href="#"><img src="images/art1.jpg" class="img-fluid" ></a>
                             <div class="content">
                                 <div>
                                     <p>Science & Technology</p>
@@ -137,7 +139,7 @@
                             </div>
                     </div>
                     <div class="col-5 art-1 article p-0">
-                        <a href="#"><img src="images/art4.jpg" class="img-fluid img-hover" ></a>
+                        <a href="#"><img src="images/art4.jpg" class="img-fluid" ></a>
                         <div class="content">
                             <div>
                                 <p>Social Sciences</p>
@@ -152,13 +154,16 @@
                     <a href="#">More Stanford News</a>
                 </button>
             </section>
-            <section class="panel3">
+
+        </section>
+
+        <section class="panel3">
             <header>
                 <h2 class="center">Stanford Events</h2>
                 <p class="paragraph-center">What’s happening on campus</p>
             </header>
-            <section class="panel">
-                <div class="grid-container">
+            <section>
+                <div>
                     <div class="row justify-content-center">
                     </div>
                     <div class="col-3 event" id="width">
@@ -237,15 +242,109 @@
                             <time>5:00 PM</time>
                         </div>
                     </div>
-                    
-                    
-
                 </div>
-
+                <button class="btn3">
+                    <a href="#">More Stanford Events</a>
+                </button>
             </section>
-            
+        </section>
+        <section class="panel4">
+            <header>
+                <h2 class="center">Academics</h2>
+                <p class="paragraph-center">
+                    Preparing students to make meaningful contributions to society<br>
+                    as engaged citizens and leaders in a complex world
+                </p>
+            </header>
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                    <div class="col-4 Academic">
+                        <figure>
+                            <picture>
+                                <img src="images/ac1.jpg">
+                            </picture>
+                        </figure>
+                        <h3>Undergraduate Education</h3>
+                        <p>
+                            Rich learning experiences that provide a broad liberal arts foundation and deep subject-area expertise
+                        </p>
+                        <p>
+                            <a class="jump-link" href="#">Undergraduate Education
+                                <span class="icon-l">
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div class="col-4 Academic">
+                        <figure>
+                            <picture>
+                                <img src="images/ac2.jpg">
+                            </picture>
+                        </figure>
+                        <h3>Graduate Education</h3>
+                        <p>
+                            Unsurpassed opportunities to participate in the advancement of entire fields of knowledge
+                        </p>
+                        <p>
+                            <a class="jump-link" href="#">Graduate Education
+                                <span class="icon-l">
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </a>
+                        </p>
+
+                    </div>
+                    <div class="col-4 Academic">
+                        <figure>
+                            <picture>
+                                <img src="images/ac3.jpg">
+                            </picture>
+                        </figure>
+                        <h3>Lifelong learning</h3>
+                        <p>
+                            Continuing adult education, executive and professional programs, and programs for K-12 students
+                        </p>
+                        <p>
+                            <a class="jump-link" href="#">Programs for Lifelong Learning
+                                <span class="icon-l">
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="panel5">
+                <div>
+                    <h3 class="text-center mt-5">
+                        Seven schools in which to pursue your passions
+                    </h3>
+                    <ul class="ul-ac">
+                        <li><a href="#">Medicine</a></li>
+                        <li><a href="#">Law</a></li>
+                        <li><a href="#">Humanities & Sciences</a></li>
+                        <li><a href="#">Engineering</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Earth</a></li>
+                        <li><a href="#">Business</a></li>
+                    </ul>
+                </div>
+                <button class="btn3">
+                    <a href="#">More About Academics</a>
+                </button>
+            </section>
+        </section>
+        <section class="panel5">
 
         </section>
+
+
+
     </section>
     
     
