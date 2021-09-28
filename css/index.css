@@ -18,6 +18,8 @@ body{
     width: 100%;
     height: 50px;
     justify-content: space-between;
+    backface-visibility: hidden;
+    z-index: 100;
 }
 #header-wordmark{
     position: relative;
@@ -66,7 +68,7 @@ body{
 #site-navigation{
     background-image: linear-gradient(
         0deg,transparent,rgba(0,0,0,.99)),linear-gradient(
-        0deg,transparent 20%,rgba(0,0,0,.6));;
+        0deg,transparent 20%,rgba(0,0,0,.6));
     position: fixed;
     display: flex;
     width: 100%;
@@ -76,6 +78,7 @@ body{
     font-weight: 400;
     transition: box-shadow .3s ease 0s;
     color: #fff;
+    z-index: 100;
 }
 .ul-sec-nav{
     padding-top: .5rem;
@@ -86,13 +89,38 @@ body{
     width: 850px;
     height: 60px;  
 }
-.ul-sec-nav li{
+/*.ul-sec-nav li{
     text-align: center;
+    position: relative;
     display: inline;
     height: 50px;
-    width: 85px;
+    width: 85px; 
+}
+.ul-sec-nav li a{
+    position: relative;
+    display: inline-block;
+}
+
+.ul-sec-nav li a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom: -7px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.ul-sec-nav li a:hover:after{
+    width: 100%; 
+  left: 0; 
     
 }
+*/
+
+
 #li-ex{
     width: 120px;
 }
@@ -172,7 +200,9 @@ picture{
    height: 40px;
    transition: all .25s ease-in-out;
 }
-.btn1 a{
+.btn1 a,
+.btn3 a
+{
     text-decoration: none;
     color: #fff;
     font-size: 18px;
@@ -180,11 +210,15 @@ picture{
     align-content: center;
     padding: 20px 20px;
 }
-.btn1:hover{
+.btn1:hover,
+.btn3:hover
+{
     background-color:#5f0e12be ;
 }
 
-.btn1 a:hover{
+.btn1 a:hover,
+.btn3 a:hover
+{
     color: #fff;
 }
 .panel2{
@@ -214,7 +248,15 @@ section{
 }
 .art-1 img{
     position: absolute;
-    display: block;  
+    display: block;
+    transform-origin: 50% 50%;
+    transition: all 5s linear ;
+}
+.art-1 img:hover{
+    transform: scale(2) rotate(0.1deg);
+}
+.article:hover{
+    box-shadow: 0 0 15px rgb(0 0 0 / 30%), 0 3px 3px rgb(0 0 0 / 30%);
 }
 
 /*hover*/
@@ -262,7 +304,8 @@ section{
     font-weight: 700;
     transition: color .25s ease-in;
 }
-.content-2 h3 a:hover{
+.content-2 h3 a:hover,
+.content-ev>h3 a:hover{
     color: #006cb8;
 }
 .post-meta p{
@@ -284,7 +327,7 @@ section{
     background-color: #2f2424;
     color: #fff;
     display: block;
-    height: 1000px;
+    height: 910px;
     width: 100%;
     overflow: hidden;
 }
@@ -319,9 +362,11 @@ section{
     width: 100%;
     height: auto;
     max-width: none;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    transition: all .3s ease-in;     
+    transform-origin: 50% 50%;
+    transition: transform 20s linear;    
+}
+.img-wrapper img:hover{
+    transform: scale(2) rotate(0.1deg);
 }
 .date{
     display: flex;
@@ -382,6 +427,106 @@ section{
 }
 #line-h{
     line-height: 20px;
-
 }
+.btn3{
+    width: 350px;
+    height: 50px;
+   margin-left: 505px;
+   margin-top: 60px;
+   background-color: #b1040e;
+   height: 40px;
+   transition: all .25s ease-in-out;
+}
+.panel4{
+    background-color:#fff;
+    color:black;
+    display: block;
+    height: 910px;
+    width: 100%;
+    overflow: hidden;
+}
+.academic{
+    position: relative;
+    background-color: #fff;
+    height: 540px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow: hidden;   
+}
+figure, img, picture {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
+}
+picture img {
+    display: block;
+    background-color: #620f0f;
+    background-image: linear-gradient(#771212,#620f0f);
+}
+.Academic>h3{
+    font-weight: 800;
+    font-size: 22px;
+}
+.jump-link{
+    transition: color .3s ease;
+    text-decoration: none;
+    color: #006cb8;
+    font-weight:500;
+    font-size: 14px;
+}
+.jump-link:hover{
+    text-decoration: underline 2px;
+}
+.icon-l{
+    position: absolute;
+    transition: all 0.3s ease 0s;
+}
+.icon-l:hover{
+    transform: translateY(-70%);
+    transform: translateX(70%); 
+}
+.panel5{
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+.ul-ac{
+    list-style-type: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.ul-ac li{
+    position: relative;
+    display: inline-block;
+    padding: 0 .5555555556em;
+    border-right: solid 1.5px black;
+}
+.ul-ac li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #006cb8;
+    position: relative;
+}
+.ul-ac li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -7px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #006cb8;;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.ul-ac li a:hover:after{
+width: 100%; 
+  left: 0; 
+}
+
 
